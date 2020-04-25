@@ -4,19 +4,19 @@ C           n-tridecane & CO2 mixed Fuel version
 C     **************************************************
 C     MAIN PROGRAM
        DOUBLE PRECISION ML,MS,MV1,T,VG2,VL,VSP
-       OPEN(10,FILE='MV3.csv')     !AFRBKにおけるガス質量
-        OPEN(18,FILE='Bubble_Radius_before_Injection.csv') !噴射前気泡径R 20190522
+       OPEN(10,FILE='../DATA/MV3.csv')     !AFRBKにおけるガス質量
+        OPEN(18,FILE='../DATA/Bubble_Radius_before_Injection.csv') !噴射前気泡径R 20190522
 
-        OPEN(28,FILE='MV082.9.csv') !蒸気質量 300ステップ毎 sub.Temp内
-        OPEN(29,FILE='MOL082.9.csv') !噴霧mol量 300ステップ毎
-        OPEN(30,FILE='VG1.csv')      !BFRBKにおけるガス体積の差VG2-VG1
-        OPEN(31,FILE='DMV1-DMV2-DMV3.csv') !全蒸気質量変化量 sub.TEMP内
+        OPEN(28,FILE='../DATA/MV082.9.csv') !蒸気質量 300ステップ毎 sub.Temp内
+        OPEN(29,FILE='../DATA/MOL082.9.csv') !噴霧mol量 300ステップ毎
+        OPEN(30,FILE='../DATA/VG1.csv')      !BFRBKにおけるガス体積の差VG2-VG1
+        OPEN(31,FILE='../DATA/DMV1-DMV2-DMV3.csv') !全蒸気質量変化量 sub.TEMP内
 c       DMV1:蒸気質量変化量(気泡内)
 c       DMV2:蒸気質量変化量(膜面)
 c       DMV3:蒸気質量変化量(液滴表面)
-        OPEN(32,FILE='T_inside_nozzle.csv')   !液体温度(ノズル内部)
-        OPEN(33,FILE='T_outside_nozzle.csv')   !液体温度(ノズル外部)
-        OPEN(101,FILE='RDR_RSP.csv')   !RDR,RSP
+        OPEN(32,FILE='../DATA/T_inside_nozzle.csv')   !液体温度(ノズル内部)
+        OPEN(33,FILE='../DATA/T_outside_nozzle.csv')   !液体温度(ノズル外部)
+        OPEN(101,FILE='../DATA/RDR_RSP.csv')   !RDR,RSP
         CALL ENTER(F,PB,PB1)
         CALL CAL(ML,MS,MV1,PB1,T,VG2,VL,VSP,Y,Y0,Z,RDR)
 c        write(555,*)VG2,VSP
